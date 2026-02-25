@@ -1,6 +1,6 @@
 # xcode-open-on-github ⚙️
 
-Quick Actions for Xcode to jump to a source code line on Github or copy GitHub permalink to clipboard.
+Quick Actions for Xcode to jump to a source code line on Github/Bitbucket or copy a permalink to clipboard.
 
 #### 1️⃣ Open on Github
 
@@ -13,6 +13,14 @@ Quick Actions for Xcode to jump to a source code line on Github or copy GitHub p
 <p align="left">
   <img src="images/copy_github_link_to_clipboard.png" width="450px"/>
 </p>
+
+#### 3️⃣ Open on Bitbucket
+
+Works the same as **Open on Github** but constructs a Bitbucket URL (`/src/` path with `#lines-{start}:{end}` anchor).
+
+#### 4️⃣ Copy Bitbucket link to clipboard
+
+Works the same as **Copy GitHub link to clipboard** but constructs a Bitbucket permalink.
 
 ## Install
 
