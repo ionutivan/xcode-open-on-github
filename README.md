@@ -1,6 +1,6 @@
 # xcode-open-on-github ⚙️
 
-Quick Actions for Xcode to jump to a source code line on Github or copy GitHub permalink to clipboard.
+Quick Actions for Xcode to jump to a source code line on Github or Bitbucket, or copy a permalink to clipboard.
 
 #### 1️⃣ Open on Github
 
@@ -13,6 +13,14 @@ Quick Actions for Xcode to jump to a source code line on Github or copy GitHub p
 <p align="left">
   <img src="images/copy_github_link_to_clipboard.png" width="450px"/>
 </p>
+
+#### 3️⃣ Open on Bitbucket
+
+Works the same as **Open on Github** but constructs a Bitbucket source URL (`/src/{commit}/{file}#lines-{start}:{end}`).
+
+#### 4️⃣ Copy Bitbucket link to clipboard
+
+Works the same as **Copy GitHub link to clipboard** but constructs a Bitbucket source URL.
 
 ## Install
 
@@ -34,6 +42,16 @@ Quick Actions for Xcode are AppleScript scripts. From the Xcode app we get a pat
 <table><tr><td>
   <img src="images/script.png" width="700px"/>
 </td></tr></table>
+
+## Verify Bitbucket copy workflow
+
+Run:
+
+```bash
+bash tests/test_copy_bitbucket_workflow.sh
+```
+
+The test checks that the workflow script structure is valid and that URL generation works for common Bitbucket remote URL formats.
 
 ## Author
 
