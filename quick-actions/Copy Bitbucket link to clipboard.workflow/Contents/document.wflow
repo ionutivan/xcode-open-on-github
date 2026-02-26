@@ -62,7 +62,7 @@
 	end tell
 	
 	set repositoryUrl to do shell script ("cd " &amp; quoted form of activeDocumentDir &amp; "; git remote get-url origin 2&gt;/dev/null || git remote -v | awk '$3 == \"(fetch)\" { print $2; exit }'")
-	set repositoryUrl to do shell script ("printf '%s' " &amp; quoted form of repositoryUrl &amp; " | sed -E 's#^ssh://[^@]+@([^/:]+)(:[0-9]+)?/#https://\1/#; s#^git@([^:]+):#https://\1/#; s#\.git$##'")
+	set repositoryUrl to do shell script ("printf '%s' " &amp; quoted form of repositoryUrl &amp; " | sed -E 's#^ssh://[^@]+@([^/:]+)(:[0-9]+)?/#https://\\\\1/#; s#^git@([^:]+):#https://\\\\1/#; s#\\\\.git$##'")
 	
 	set activeDocumentFileName to do shell script ("basename " &amp; quoted form of activeDocumentPath)
 	set activeDocumentRelativeDir to do shell script ("cd " &amp; quoted form of activeDocumentDir &amp; "; git rev-parse --show-prefix")
