@@ -149,7 +149,8 @@ test_workflow_source_contains_bitbucket_conventions() {
 	assert_contains "$source" "#lines-" "Bitbucket line-range anchor should be used"
 	assert_contains "$source" "git remote get-url origin" "Workflow should prefer the origin remote URL"
 	assert_contains "$source" "sed -E 's#^ssh://[^@]+@" "Workflow should normalize ssh remotes to https"
-	assert_contains "$source" '\\\\1' "Workflow should escape backreferences for AppleScript string parsing"
+	assert_contains "$source" '\\1' "Workflow should escape backreferences for AppleScript string parsing"
+	assert_contains "$source" '\\.git$##' "Workflow should strip trailing .git from remote URLs"
 }
 
 test_url_generation_for_remote_variants() {
