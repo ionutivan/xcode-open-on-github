@@ -43,6 +43,16 @@ Quick Actions for Xcode are AppleScript scripts. From the Xcode app we get a pat
   <img src="images/script.png" width="700px"/>
 </td></tr></table>
 
+## Verify Bitbucket copy workflow
+
+Run:
+
+```bash
+bash tests/test_copy_bitbucket_workflow.sh
+```
+
+The test checks that the workflow script structure is valid and that URL generation works for common Bitbucket remote URL formats.
+
 ## Author
 
 Wojtek Lukaszuk [@wojteklu](http://twitter.com/wojteklu)
